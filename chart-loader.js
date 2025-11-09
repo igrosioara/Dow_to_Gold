@@ -14,7 +14,7 @@
 (function loadChartsScript() {
   const script = document.createElement("script");
   script.src =
-    "https://cdn.jsdelivr.net/gh/tyrionlannisterpxl-sys/gold-ratio/charts.js?v=" +
+    "https://cdn.jsdelivr.net/gh/igrosioara/Dow_to_Gold/charts.js?v=" +
     Date.now();
   script.async = true;
 
