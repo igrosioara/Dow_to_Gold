@@ -2081,9 +2081,9 @@ function setupMiniChartButton(buttonId, timeFrame) {
 }
 
 // Setup for Mini Chart Print Buttons
-setupMiniChartButton("btnPrintMiniMonthly", "Monthly");
-setupMiniChartButton("btnPrintMiniWeekly", "Weekly");
-setupMiniChartButton("btnPrintMiniDaily", "Daily");
+// setupMiniChartButton("btnPrintMiniMonthly", "Monthly");
+// setupMiniChartButton("btnPrintMiniWeekly", "Weekly");
+// setupMiniChartButton("btnPrintMiniDaily", "Daily");
 
 // Chart Rendering
 const chartConfigurations = generateChartConfigurations();
