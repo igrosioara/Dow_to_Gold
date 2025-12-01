@@ -2042,43 +2042,43 @@ valuesToUpdate.forEach((item) => {
 });
 
 // Create and attach download links for charts.
-const btnDisplay = document.getElementById("btnDisplay");
-const downloadTasks = timePeriods.map((period) => {
-  const { containers, files } = generateChartArtefacts(period);
-  return {
-    label: `Print ${period} Charts`,
-    containers,
-    files,
-  };
-});
+// const btnDisplay = document.getElementById("btnDisplay");
+// const downloadTasks = timePeriods.map((period) => {
+//   const { containers, files } = generateChartArtefacts(period);
+//   return {
+//     label: `Print ${period} Charts`,
+//     containers,
+//     files,
+//   };
+// });
 
-downloadTasks.forEach((task) => {
-  const link = document.createElement("a");
-  link.id = `js-${task.label.trim().toLowerCase().replaceAll(" ", "-")}`;
-  link.textContent = task.label;
-  Object.assign(link.style, {
-    marginLeft: "20px",
-    color: "#000",
-    textDecoration: "underline",
-    cursor: "pointer",
-  });
+// downloadTasks.forEach((task) => {
+//   const link = document.createElement("a");
+//   link.id = `js-${task.label.trim().toLowerCase().replaceAll(" ", "-")}`;
+//   link.textContent = task.label;
+//   Object.assign(link.style, {
+//     marginLeft: "20px",
+//     color: "#000",
+//     textDecoration: "underline",
+//     cursor: "pointer",
+//   });
 
-  btnDisplay.after(link);
-  setupChartDownloader(link, task.containers, task.files);
-});
+//   btnDisplay.after(link);
+//   setupChartDownloader(link, task.containers, task.files);
+// });
 
-/**
- * Helper function to set up a download button for Mini charts.
- * @param {string} buttonId - The ID of the button element.
- * @param {string} timeFrame - The time frame for the charts ('Monthly', 'Weekly', 'Daily').
- */
-function setupMiniChartButton(buttonId, timeFrame) {
-  const button = document.getElementById(buttonId);
-  if (button) {
-    const { containers, files } = generateMiniChartArtefacts(timeFrame);
-    setupChartDownloader(button, containers, files);
-  }
-}
+
+// Helper function to set up a download button for Mini charts.
+//  @param {string} buttonId - The ID of the button element.
+//  @param {string} timeFrame - The time frame for the charts ('Monthly', 'Weekly', 'Daily').
+//  
+// function setupMiniChartButton(buttonId, timeFrame) {
+//   const button = document.getElementById(buttonId);
+//   if (button) {
+//     const { containers, files } = generateMiniChartArtefacts(timeFrame);
+//     setupChartDownloader(button, containers, files);
+//   }
+// }
 
 // Setup for Mini Chart Print Buttons
 // setupMiniChartButton("btnPrintMiniMonthly", "Monthly");
