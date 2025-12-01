@@ -1824,7 +1824,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
           color: "black",
           font: {
             weight: "bold",
-            size: 5,
+            size: 7,
           },
         },
       },
@@ -1833,7 +1833,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
         text: text,
         color: "black",
         font: {
-          size: 7,
+          size: 9,
           family: "Arial",
         },
       },
@@ -1851,7 +1851,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
           minRotation: 90,
           color: "black",
           font: {
-            size: 5,
+            size: 7,
             weight: "bold",
           },
         },
@@ -1860,7 +1860,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
         ticks: {
           color: "black",
           font: {
-            size: 5,
+            size: 7,
             weight: "bold",
           },
           // Used to format the values on the Y axis
@@ -1953,7 +1953,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     datasets.forEach((dataset) => {
       // Reduce line thickness and point size for mini charts
       dataset.borderWidth = 2;
-      dataset.pointRadius = 1.5;
+      dataset.pointRadius = 0.5;
 
       // For mini histograms, force borderWidth to 0 to remove the inner white line.
       if (dataset.label === DATASET_LABELS.HISTOGRAM) {
@@ -2067,11 +2067,10 @@ valuesToUpdate.forEach((item) => {
 //   setupChartDownloader(link, task.containers, task.files);
 // });
 
-
 // Helper function to set up a download button for Mini charts.
 //  @param {string} buttonId - The ID of the button element.
 //  @param {string} timeFrame - The time frame for the charts ('Monthly', 'Weekly', 'Daily').
-//  
+//
 // function setupMiniChartButton(buttonId, timeFrame) {
 //   const button = document.getElementById(buttonId);
 //   if (button) {
