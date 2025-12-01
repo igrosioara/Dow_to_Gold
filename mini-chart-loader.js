@@ -1,10 +1,10 @@
-// chart-loader.js
+// mini-chart-loader.js
 // Dynamically load charts.js and display current month + last values
 
 (function loadChartsScript() {
   const script = document.createElement("script");
   script.src =
-    "https://cdn.jsdelivr.net/gh/igrosioara/Dow_to_Gold/charts.js?v=" +
+    "https://cdn.jsdelivr.net/gh/igrosioara/Dow_to_Gold/charts_latest.js?v=" +
     Date.now();
   script.async = true;
 
