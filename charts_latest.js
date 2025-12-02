@@ -1818,7 +1818,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     },
     plugins: {
       legend: {
-        display: true,
+        display: false,
         position: "top",
         labels: {
           color: "black",
@@ -1845,6 +1845,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     },
     scales: {
       x: {
+        display: false,
         ticks: {
           autoSkip: false,
           maxRotation: 90,
@@ -1857,6 +1858,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
         },
       },
       y: {
+        display: false,
         ticks: {
           color: "black",
           font: {
