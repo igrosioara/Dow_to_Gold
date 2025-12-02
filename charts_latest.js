@@ -1744,7 +1744,7 @@ const customCanvasBackgroundColor = {
     ctx.save();
 
     // Draw the border first
-    ctx.lineWidth = options.borderWidth || 10;
+    ctx.lineWidth = options.borderWidth || 2;
     ctx.strokeStyle = options.borderColor || "#000000";
     ctx.strokeRect(0, 0, chart.width, chart.height);
 
@@ -1840,7 +1840,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
       customCanvasBackgroundColor: {
         color: "white",
         borderColor: "#000000",
-        borderWidth: 4,
+        borderWidth: 1,
       },
     },
     scales: {
