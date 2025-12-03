@@ -1814,6 +1814,11 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     elements: {
       line: {
         tension: 0.4,
+        borderWidth: 1.5,
+      },
+      point: {
+        radius: 1.5,
+        hoverRadius: 3,
       },
     },
     plugins: {
@@ -1954,8 +1959,8 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
   if (elementId.endsWith("_Mini")) {
     datasets.forEach((dataset) => {
       // Reduce line thickness and point size for mini charts
-      dataset.borderWidth = 2;
-      dataset.pointRadius = 0.5;
+      dataset.borderWidth = 1;
+      dataset.pointRadius = 0;
 
       // For mini histograms, force borderWidth to 0 to remove the inner white line.
       if (dataset.label === DATASET_LABELS.HISTOGRAM) {
