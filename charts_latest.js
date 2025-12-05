@@ -1814,11 +1814,11 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     elements: {
       line: {
         tension: 0.4,
-        borderWidth: 0.5,
+        borderWidth: 0.1,
       },
       point: {
-        radius: 1.5,
-        hoverRadius: 3,
+        radius: 0,
+        hoverRadius: 0,
       },
     },
     plugins: {
