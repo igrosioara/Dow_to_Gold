@@ -1952,7 +1952,7 @@ function createChart({ elementId, type, labels, text, datasets, ...rest }) {
     datasets.forEach((dataset) => {
       // Reduce line thickness and point size for mini charts
       dataset.borderWidth = 2;
-      dataset.pointRadius = 1.5;
+      dataset.pointRadius = 0;
 
       // For mini histograms, force borderWidth to 0 to remove the inner white line.
       if (dataset.label === DATASET_LABELS.HISTOGRAM) {
