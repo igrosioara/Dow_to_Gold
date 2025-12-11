@@ -787,7 +787,7 @@ function updateDOMWithValues(id, values) {
 }
 
 // Charts Title
-const MONTHLY_CURRENT_DATE = "December 2025";
+const MONTHLY_CURRENT_DATE = "November 2025";
 const WEEKLY_CURRENT_DATE = "December 5, 2025";
 const DAILY_CURRENT_DATE = "December 5, 2025";
 
