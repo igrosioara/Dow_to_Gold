@@ -1,0 +1,1174 @@
+<html lang="en">
+  <head>
+    <style>
+      canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+
+      .container {
+        margin-top: 20px;
+      }
+
+      .button-container {
+        margin-top: 20px;
+        margin-left: 80px;
+      }
+    </style>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <button type="button" id="btnDisplay">Display</button>
+
+    <div class="button-container">
+      <button id="btnPrintMiniDaily">Print Mini Daily Charts</button>
+      <button id="btnPrintMiniWeekly">Print Mini Weekly Charts</button>
+      <button id="btnPrintMiniMonthly">Print Mini Monthly Charts</button>
+    </div>
+
+    <!-- Start Containers Gold Monthly -->
+    <div class="container">
+      <canvas id="Gold_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Gold Monthly Value:</p>
+    <p id="goldMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Gold Monthly -->
+
+    <!-- Start Containers Gold Weekly -->
+    <div class="container">
+      <canvas id="Gold_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Gold Weekly Value:</p>
+    <p id="goldWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Gold Weekly -->
+
+    <!-- Start Containers Gold Daily -->
+    <div class="container">
+      <canvas id="Gold_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Gold Daily Value:</p>
+    <p id="goldDailyValue"></p>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Gold_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Gold Daily -->
+
+    <!-- Start Silver Monthly -->
+    <div class="container">
+      <canvas id="Silver_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Silver Monthly Value:</p>
+    <p id="silverMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Silver Monthly -->
+
+    <!-- Start Silver Weekly -->
+    <div class="container">
+      <canvas id="Silver_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Silver Weekly Value:</p>
+    <p id="silverWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Silver Weekly -->
+
+    <!-- Start Containers Silver Daily -->
+    <div class="container">
+      <canvas id="Silver_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Silver Daily Value:</p>
+    <p id="silverDailyValue"></p>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Silver_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Silver Daily -->
+
+    <!-- Start Containers Platinum Monthly -->
+    <div class="container">
+      <canvas id="Platinum_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Platinum Monthly Value:</p>
+    <p id="platinumMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Platinum Monthly -->
+
+    <!-- Start Containers Platinum Weekly -->
+    <div class="container">
+      <canvas id="Platinum_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Platinum Weekly Value:</p>
+    <p id="platinumWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Platinum Weekly -->
+
+    <!-- Start Containers Platinum Daily -->
+    <div class="container">
+      <canvas id="Platinum_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Platinum Daily Value:</p>
+    <p id="platinumDailyValue"></p>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Platinum_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Platinum Daily -->
+
+    <!-- Start Containers Palladium Monthly -->
+    <div class="container">
+      <canvas id="Palladium_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Palladium Monthly Value:</p>
+    <p id="palladiumMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="Palladium_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas
+        id="Palladium_MACD_Monthly_Mini"
+        width="586"
+        height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas
+        id="Palladium_HIST_Monthly_Mini"
+        width="594"
+        height="238"></canvas>
+    </div>
+    <!-- End Containers Palladium Monthly -->
+
+    <!-- Start Containers Palladium Weekly -->
+    <div class="container">
+      <canvas id="Palladium_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Palladium Weekly Value:</p>
+    <p id="palladiumWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="Palladium_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Palladium Weekly -->
+
+    <!-- Start Containers Palladium Daily -->
+    <div class="container">
+      <canvas id="Palladium_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>Palladium Daily Value:</p>
+    <p id="palladiumDailyValue"></p>
+
+    <div class="container">
+      <canvas id="Palladium_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="Palladium_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers Palladium Daily -->
+
+    <!-- Start Containers DJIA Monthly -->
+    <div class="container">
+      <canvas id="DJIA_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DJIA Monthly Value:</p>
+    <p id="djiaMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DJIA Monthly -->
+
+    <!-- Start Containers DJIA Weekly -->
+    <div class="container">
+      <canvas id="DJIA_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DJIA Weekly Value:</p>
+    <p id="djiaWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DJIA Weekly -->
+
+    <!-- Start Containers DJIA Daily -->
+    <div class="container">
+      <canvas id="DJIA_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DJIA Daily Value:</p>
+    <p id="djiaDailyValue"></p>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DJIA_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DJIA Daily -->
+
+    <!-- Start Containers SP500 Monthly -->
+    <div class="container">
+      <canvas id="SP500_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500 Monthly Value:</p>
+    <p></p>
+    <p id="sp500MonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500 Monthly -->
+
+    <!-- Start Containers SP500 Weekly -->
+    <div class="container">
+      <canvas id="SP500_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500 Weekly Value:</p>
+    <p></p>
+    <p id="sp500WeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500 Weekly -->
+
+    <!-- Start Containers SP500 Daily -->
+    <div class="container">
+      <canvas id="SP500_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500 Daily Value:</p>
+    <p></p>
+    <p id="sp500DailyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500 Daily -->
+
+    <!-- Start Containers GTSILV Monthly -->
+    <div class="container">
+      <canvas id="GTSILV_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTSILV Monthly Value:</p>
+    <p id="gtsilvMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTSILV Monthly -->
+
+    <!-- Start Containers GTSILV Weekly -->
+    <div class="container">
+      <canvas id="GTSILV_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTSILV Weekly Value:</p>
+    <p id="gtsilvWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTSILV Weekly -->
+
+    <!-- Start Containers GTSILV Daily -->
+    <div class="container">
+      <canvas id="GTSILV_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTSILV Daily Value:</p>
+    <p id="gtsilvDailyValue"></p>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTSILV_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTSILV Daily -->
+
+    <!-- Start Containers GTPLAT Monthly -->
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPLAT Monthly Value:</p>
+    <p id="gtplatMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPLAT Monthly -->
+
+    <!-- Start Containers GTPLAT Weekly -->
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPLAT Weekly Value:</p>
+    <p id="gtplatWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPLAT Weekly -->
+
+    <!-- Start Containers GTPLAT Daily -->
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPLAT Daily Value:</p>
+    <p id="gtplatDailyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPLAT_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPLAT Daily -->
+
+    <!-- Start Containers GTPAL Monthly -->
+    <div class="container">
+      <canvas id="GTPAL_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPAL Monthly Value:</p>
+    <p id="gtpalMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPAL Monthly -->
+
+    <!-- Start Containers GTPAL Weekly -->
+    <div class="container">
+      <canvas id="GTPAL_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPAL Weekly Value:</p>
+    <p id="gtpalWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPAL Weekly -->
+
+    <!-- Start Containers GTPAL Daily -->
+    <div class="container">
+      <canvas id="GTPAL_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>GTPAL Daily Value:</p>
+    <p id="gtpalDailyValue"></p>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="GTPAL_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers GTPAL Daily -->
+
+    <!-- Start Containers DTG Monthly -->
+    <div class="container">
+      <canvas id="DTG_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTG Monthly Value:</p>
+    <p id="dtgMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTG Monthly -->
+
+    <!-- Start Containers DTG Weekly-->
+    <div class="container">
+      <canvas id="DTG_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTG Weekly Value:</p>
+    <p id="dtgWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTG Weekly-->
+
+    <!-- Start Containers DTG Daily -->
+    <div class="container">
+      <canvas id="DTG_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTG Daily Value:</p>
+    <p id="dtgDailyValue"></p>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTG_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTG Daily -->
+
+    <!-- Start Containers DTS Monthly -->
+    <div class="container">
+      <canvas id="DTS_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTS Monthly Value:</p>
+    <p id="dtsMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTS Monthly -->
+
+    <!-- Start Containers DTS Weekly -->
+    <div class="container">
+      <canvas id="DTS_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTS Weekly Value:</p>
+    <p id="dtsWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTS Weekly -->
+
+    <!-- Start Containers DTS Daily -->
+    <div class="container">
+      <canvas id="DTS_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>DTS Daily Value:</p>
+    <p id="dtsDailyValue"></p>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="DTS_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers DTS Daily -->
+
+    <!-- Start Containers SP500TG Monthly -->
+    <div class="container">
+      <canvas id="SP500TG_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TG Monthly Value:</p>
+    <p id="sp500tgMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500TG Monthly -->
+
+    <!-- Start Containers SP500TG Weekly -->
+    <div class="container">
+      <canvas id="SP500TG_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TG Weekly Value:</p>
+    <p id="sp500tgWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500TG Weekly -->
+
+    <!-- Start Containers SP500TG Daily -->
+    <div class="container">
+      <canvas id="SP500TG_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TG Daily Value:</p>
+    <p id="sp500tgDailyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TG_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500TG Daily -->
+
+    <!-- Start Containers SP500TS Monthly -->
+    <div class="container">
+      <canvas id="SP500TS_MVA_Monthly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MVA_Monthly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TS Monthly Value:</p>
+    <p id="sp500tsMonthlyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Monthly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Monthly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Monthly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500TS Monthly -->
+
+    <!-- Start Containers SP500TS Weekly -->
+    <div class="container">
+      <canvas id="SP500TS_MVA_Weekly" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MVA_Weekly_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TS Weekly Value:</p>
+    <p id="sp500tsWeeklyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Weekly_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Weekly" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Weekly_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Containers SP500TS Weekly -->
+
+    <!-- Start Containers SP500TS Daily -->
+    <div class="container">
+      <canvas id="SP500TS_MVA_Daily" width="960" height="576"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MVA_Daily_Mini" width="590" height="352"></canvas>
+    </div>
+
+    <p>SP500TS Daily Value:</p>
+    <p id="sp500tsDailyValue"></p>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_MACD_Daily_Mini" width="586" height="238"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Daily" width="960" height="384"></canvas>
+    </div>
+
+    <div class="container">
+      <canvas id="SP500TS_HIST_Daily_Mini" width="594" height="238"></canvas>
+    </div>
+    <!-- End Start Containers SP500TS Daily -->
+
+    <script src="chart.min.js"></script>
+    <script src="charts_20251205.js"></script>
+  </body>
+</html>
