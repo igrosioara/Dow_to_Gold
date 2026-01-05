@@ -2002,6 +2002,7 @@ valuesToUpdate.forEach((item) => {
 });
 
 // Create and attach download links for charts.
+/*
 const btnDisplay = document.getElementById("btnDisplay");
 const downloadTasks = timePeriods.map((period) => {
   const { containers, files } = generateChartArtefacts(period);
@@ -2043,7 +2044,7 @@ function setupMiniChartButton(buttonId, timeFrame) {
 setupMiniChartButton("btnPrintMiniMonthly", "Monthly");
 setupMiniChartButton("btnPrintMiniWeekly", "Weekly");
 setupMiniChartButton("btnPrintMiniDaily", "Daily");
-
+*/
 // Chart Rendering
 const chartConfigurations = generateChartConfigurations();
 chartConfigurations.forEach((config) => createChart(config));
