@@ -757,8 +757,8 @@ function updateDOMWithValues(id, values) {
 
 // Charts Title
 const MONTHLY_CURRENT_DATE = "December 2025";
-const WEEKLY_CURRENT_DATE = "January 16, 2026";
-const DAILY_CURRENT_DATE = "January 16, 2026";
+const WEEKLY_CURRENT_DATE = "January 23, 2026";
+const DAILY_CURRENT_DATE = "January 23, 2026";
 
 // expose data globally so Wix can read it
 window.jsData = {
